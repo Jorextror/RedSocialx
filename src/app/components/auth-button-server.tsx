@@ -6,6 +6,8 @@ export async function AuthButtonServer () {
     const supabase = createServerComponentClient({ cookies })
     const { data: {session } } = await supabase.auth.getSession()
     
+
+
     // renderizar el componente del cliente y le pasamos la session del user
     return <AuthButton session={session} />
 }
